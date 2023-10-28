@@ -1,0 +1,51 @@
+﻿@model Student
+@{
+    Layout = "~/Views/Shared/_LayoutForAddPage.cshtml";
+}
+
+
+
+<div class="textThree">
+    <h3>Delete Students <i class="bi bi-person-x-fill"></i> </h3>
+</div>
+<div class="content">
+
+
+
+
+    <div class="inputForm">
+        <form method="post" asp-action="DeleteStudent">
+            <div class="form">
+                <label asp-for="FullName" class="mb-2"></label>
+                <input type="text" asp-for="FullName" placeholder="Full Name" disabled>
+            </div>
+
+            <div class="form">
+                <label asp-for="StudentNumber" class="mb-2"></label>
+                <input type="text" asp-for="StudentNumber" placeholder="Student Number" disabled>
+            </div>
+
+            <div class="form">
+                <label asp-for="Grade" class="mb-2"></label>
+                <select asp-for="Grade" disabled>
+                    <option value="">Grade Name</option>
+                    @for (int x = 6; x <= 12; x++)
+                    {
+                        <option value="@x Th"> @x <span>Th</span> </option>
+                    }
+                </select>
+            </div>
+            <button type="submit" class="btn btn-danger me-2">Delete</button>
+            <a asp-controller="Student" asp-action="AllResults" class="btn btn-primary">Back To Home</a>
+        </form>
+
+
+
+    </div>
+
+    <div class="logo">
+        <img src="~/Images/Delete.svg"/>
+    </div>
+
+
+</div>

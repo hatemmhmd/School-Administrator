@@ -1,0 +1,147 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #FAF0E4;
+    font-family: 'Exo 2', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 0 120px;
+    background-color: #9BCDD2;
+    margin-bottom: 40px;
+    border-radius: 0 0 30px 30px;
+}
+
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        margin-top: 0px;
+    }
+
+header .content ul {
+margin-bottom: 0 !important;
+}
+
+
+    header .content ul li {
+        list-style: none;
+        font-size: 15px;
+        background-color: #FF8551;
+        padding: 13px 10px;
+        border-radius: 35px;
+        transition: 0.3s linear;
+        cursor: pointer;
+    }
+
+        header .content ul li:hover {
+            background-color: #072541;
+        }
+
+
+        header .content ul li a {
+            text-decoration: none;
+            text-transform: capitalize;
+            color: #F0F0F0;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+
+    header div input {
+        border-radius: 10px;
+        outline: none;
+        border: beige;
+        padding: 3px 25px;
+        margin:0 5px;
+    }
+
+
+
+
+.content .form{
+    display:flex;
+    flex-direction:column;
+    width:600px;
+    margin:30px 0;
+}
+
+    .content .form input,
+    .content .form select {
+        outline: none;
+        border: 1px solid #243763;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+
+    .content .logo img {
+        width: 450px
+    }
+
+
+
+.textThree {
+    position:relative;
+}
+
+.textThree h3 {
+    letter-spacing: 1px ;
+    color:#072541;
+    text-align:center;
+    text-transform:uppercase;
+}
+
+    .textThree h3::after {
+        content: "";
+        display: block;
+        height: 5px;
+        width: 110px;
+        background-color: #FF8551;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 40px;
+    }
+
+
+
+footer {
+    background-color: #ADE4DB;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 50px;
+    position: relative;
+    top: 226px;
+    width: 100%;
+}
+
+    footer p{
+        margin-bottom:0 !important;
+        font-size:17px;
+        font-weight:600;
+    }
+
+    footer img{
+        width:110px;
+        vertical-align:unset !important; 
+    }
+
+
+
+
+#FFDEDE

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Student>
+
+
+
+<div class="textThree  mb-5">
+    <h3> All Students <i class="bi bi-people-fill"></i> </h3>
+</div>
+
+
+<table class="table table-striped table-dark table-hover">
+
+
+    <thead class="thead-dark">
+        <tr>
+            <th>Full Name</th>
+            <th>Student Number</th>
+            <th>Grade</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(var student in Model)
+        {
+            <tr>
+                <td class="p-3">@student.FullName.ToUpper()</td>
+                <td class="p-3">@student.StudentNumber</td>
+                <td class="p-3">@student.Grade</td>
+                <th class="p-3">
+                    <a class="btn btn-secondary btn-sm me-3" style="letter-spacing:1px" asp-controller="Student" asp-action="UpdateStudent" asp-route-Id="@student.Id"> <i class="bi bi-pencil-fill"></i> EDIT </a>
+                    <a class="btn btn-danger btn-sm" style="letter-spacing:1px" asp-controller="Student" asp-action="DeleteStudent" asp-route-Id="@student.Id"> <i class="bi bi-archive"></i> DELETE </a>
+                </th>
+            </tr>
+      
+        }
+    </tbody>
+</table>
+
+
+
+
+
+
+
